@@ -4,13 +4,14 @@
     %title= t(:site_title)
     %meta{ charset: "utf-8" }
     %meta{ name: "viewport", content: "width=device-width, initial-scale=1, maximum-scale=1" }
+    %link{ href: "http://fonts.googleapis.com/css?family=Open+Sans", rel: "stylesheet", type: "text/css" }
     = stylesheet_link_tag    "application", :media => "all"
     = csrf_meta_tags
   %body
     / Header
-    .row
-      .twelve.columns
-        %header= link_to t(:site_title), root_path
+    %header
+      .logo= link_to image_tag('red-flame.png'), root_path
+      .title= t(:site_title)
 
     / Messages
     .row
@@ -26,11 +27,8 @@
         = yield
 
     / Footer
-    .row
-      .twelve.columns
-        %footer
-          %hr/
-          %h5.subheader &copy; 2013 John van Arkelen
+    %footer
+      %h5.subheader &copy; 2013 John van Arkelen
 
     /[if lt IE 9]
       %script{ src: "http://html5shim.googlecode.com/svn/trunk/html5.js", :type => "text/javascript" }
