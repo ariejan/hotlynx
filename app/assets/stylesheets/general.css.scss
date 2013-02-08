@@ -20,6 +20,10 @@ a {
     color: lighten($base-color, 10%);
   }
 }
+a.radius {
+  color: #FFFFFF;
+  background-color: $base-color;
+}
 
 header {
   margin-bottom: 3em;
@@ -55,3 +59,31 @@ footer {
     color: $header-title-color;
   }
 }
+.query {
+  input {
+    font-size: $size-normal;
+    padding: 3px;
+  }
+}
+
+form {
+  $outdent: 100px;
+
+  & > div {
+    padding-left: $outdent;
+    margin: $line 0;
+
+    input {
+      font-size: $size-normal;
+      padding: 3px;
+      margin: -3px 0;
+    }
+
+    label {
+      float: left;
+      margin-left: -$outdent;
+      width: $outdent;
+    }
+  }
+}
+

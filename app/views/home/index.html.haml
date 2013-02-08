@@ -1,18 +1,41 @@
-%div{"ng-controller" => "HotlynxCtrl"}
-  %form{"ng-submit" => "addLink()"}
-    Title:
-    %input{"ng-model" => "newLink.title", :type => "text"}
-    Description:
-    %input{"ng-model" => "newLink.description", :type => "text"}
-    %input{:type => "submit", :value => "Add"}
+.row
+  .twelve.columns
+    %div{"ng-controller" => "HotlynxCtrl"}
+      .row
+        .two.columns.offset-by-ten
+          %a.radius.button{:href => "#"}
+            Add Link
 
-  .filter
-    Filter:
-    %input{"ng-model" => "query"}
+      .row
+        .twelve.columns
+          %form{"ng-submit" => "addLink()"}
+            Title:
+            %input{"ng-model" => "newLink.title", :type => "text"}
+            Description:
+            %input{"ng-model" => "newLink.description", :type => "text"}
+            URL:
+            %input{"ng-model" => "newLink.url", :type => "text"}
+            Category:
+            %input{"ng-model" => "newLink.category", :type => "text"}
+            %input{:type => "submit", :value => "Add"}
 
-  %ul
-    %li{"ng-repeat" => "link in links | filter:query"}
-      .title
-        {{ link.title }}
-      .description
-        {{ link.description }}
+      .row
+        .twelve.columns.query
+          %label Filter
+          %input{"ng-model" => "query", :type => "text"}
+
+      .row
+        .twelve.columns.links
+          .link_line{"ng-repeat" => "link in links | filter:query"}
+            .vote
+              .vote_count
+                23
+            .link
+              .title
+                %a{href: "{{link.url}}", target: "_blank"}
+                  {{ link.title }}
+
+              .description
+                {{ link.description }}
+            .category
+              {{ link.category }}

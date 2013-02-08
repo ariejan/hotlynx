@@ -1,107 +1,65 @@
 @import "_variables.css.scss";
 @import "_mixins.css.scss";
 
-.link_line {
-  background-color: #FFFFFF;
-  width: 90%;
-  height: 65px;
-  margin-bottom: 8px;
+.links {
+  margin-top: 3em;
 
-  .vote {
-    width: 10%;
-    height: 100%;
+  .link_line {
     float: left;
-    border-right: 1px dotted grey;
-    text-align: center;
-    padding-top: 5px;
+    background-color: #FFFFFF;
+    width: 100%;
+    margin-bottom: 0.8em;
+    border: 1px solid #C5C3C3;
+    @include box-shadow;
 
-    .vote_count {
-      margin: 2px 0;
-      font-size: 125%;
-    }
-    .upvote, .downvote > a {
-      font-size: 75%;
-    }
-  }
-  .link {
-    float: left;
-    width: 80%;
-    margin: 10px 5px 5px 10px;
-
-    .link_name {
+    .vote {
       float: left;
-      padding: 5px;
+      width: 10%;
+      height: 100%;
+      border-right: 2px dotted #C5C3C3;
+      text-align: center;
+      padding-bottom: 1.2em;
 
-      a {
+      .vote_count {
+        margin-top: 0.5em;
+        text-align: center;
         font-size: 125%;
       }
-    }
-    .link_details {
-      float: left;
-      clear: both;
-      width: 100%;
-      padding: 0 5px 5px 5px;
-
-      .submitted {
-        float: left;
-        font-size: 80%;
-        padding: 2px;
+      .upvote, .downvote > a {
+        font-size: 75%;
       }
-      .link_tags, .link_remove {
+    }
+    .link {
+      float: left;
+      width: 70%;
+      margin: 0.5em 1em;
+
+      .title {
         float: left;
 
         a {
-          font-size: 80%;
-          margin-left: 10px;
+          font-size: 125%;
         }
       }
+      .description {
+        float: left;
+        clear: both;
+        width: 100%;
+        font-size: 80%;
+        padding-top: 0.5em  ;
+      }
     }
-  }
-  .link_comments {
-    float: left;
-    padding-top: 20px;
-    text-align:center;
-    width: 5%;
-
-    a {
-      font-size: 200%;
-    }
-  }
-}
-.new_link {
-  width: 10em;
-  margin-bottom: 10px;
-  padding: 10px 15px;
-
-  a, a:hover, a:visited {
-    color: #FFFFFF;
-  }
-}
-.comment {
-  list-style: none;
-  margin: $line 0;
-  p {
-    margin: 0;
-  }
-}
-
-form {
-  $outdent: 100px;
-
-  & > div {
-    padding-left: $outdent;
-    margin: $line 0;
-
-    input {
-      font-size: $size-normal;
-      padding: 3px;
-      margin: -3px 0;
-    }
-
-    label {
-      float: left;
-      margin-left: -$outdent;
-      width: $outdent;
+    .category {
+      float: right;
+      padding: 0.5em;
+      margin: 0.5em;
+      margin-right: 1em;
+      background-color: $base-color;
+      border: 1px solid darken($base-color, 10);;
+      color: #FFFFFF;
+      font-size: 90%;
+      font-weight: bold;
+      @include round-corners;
     }
   }
 }
