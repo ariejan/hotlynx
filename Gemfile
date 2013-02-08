@@ -8,6 +8,7 @@ gem 'activerecord-postgresql-adapter'
 gem 'i18n'
 gem 'haml'
 gem 'bcrypt-ruby', '3.0.1'
+gem 'newrelic_rpm'
 
 group :assets do
   gem 'sass-rails'
