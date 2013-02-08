@@ -1,0 +1,10 @@
+@mixin round-corners {
+  border-radius:25px;
+  -moz-border-radius:25px;
+}
+
+@mixin box-shadow {
+  -moz-box-shadow: 7px 7px 5px #888;
+  -webkit-box-shadow: 7px 7px 5px #888;
+  box-shadow: 7px 7px 5px #888; 
+}
