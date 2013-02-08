@@ -1,9 +1,37 @@
 !!!
 %html{"ng-app" => "Hotlynx"}
   %head
-    %title Hotlynx
+    %title= t(:site_title)
+    %meta{ charset: "utf-8" }
+    %meta{ name: "viewport", content: "width=device-width, initial-scale=1, maximum-scale=1" }
     = stylesheet_link_tag    "application", :media => "all"
-    = javascript_include_tag "application"
     = csrf_meta_tags
   %body
-    = yield
+    / Header
+    .row
+      .twelve.columns
+        %header= link_to t(:site_title), root_path
+
+    / Messages
+    .row
+      .twelve.columns.messages
+        - flash.each do |name, msg|
+          %div{class: "alert-box #{name}"}
+            = msg
+            %a.close{:href => ""} &times;
+
+    / Body
+    .row
+      .twelve.columns
+        = yield
+
+    / Footer
+    .row
+      .twelve.columns
+        %footer
+          %hr/
+          %h5.subheader &copy; 2013 John van Arkelen
+
+    /[if lt IE 9]
+      %script{ src: "http://html5shim.googlecode.com/svn/trunk/html5.js", :type => "text/javascript" }
+    = javascript_include_tag "application"

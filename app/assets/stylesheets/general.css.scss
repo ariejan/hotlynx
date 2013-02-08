@@ -63,7 +63,7 @@ header {
   a, a:visited, a:hover {
     font-size: 3em; /* 36px/16px */
     font-weight: bold;
-    font-family: $handwriting-font;
+    font-family: $default-font;
     color: grey;
   }
 }
@@ -117,7 +117,7 @@ section {
       margin-bottom: 0;
     }
     .wrapper {
-      display: block; 
+      display: block;
       clear: both;
     }
   }
@@ -177,4 +177,3 @@ footer {
     }
   }
 }
- 
