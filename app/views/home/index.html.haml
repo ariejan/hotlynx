@@ -1,0 +1,7 @@
+%h1 Hotlynx
+%div{"ng-controller" => "HotlynxCtrl"}
+  %form{"ng-submit" => "addLink()"}
+    %input{"ng-model" => "newLink.title", :type => "text"}
+      %input{:type => "submit", :value => "Add"}
+  %ul
+    %li{"ng-repeat" => "link in links"}
