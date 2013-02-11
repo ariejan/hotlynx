@@ -1,10 +1,6 @@
 .row
   .twelve.columns
-    %div{"ng-controller" => "HotlynxCtrl"}
-      .row
-        .two.columns.offset-by-ten
-          %a.radius.button{:href => "#"}
-            Add Link
+    %div{"ng-controller" => "LinksOverviewCtrl"}
 
       .row
         .twelve.columns
@@ -17,12 +13,17 @@
             %input{"ng-model" => "newLink.url", :type => "text"}
             Category:
             %input{"ng-model" => "newLink.category", :type => "text"}
-            %input{:type => "submit", :value => "Add"}
+            %input{type: "submit", value: "Add", class: "radius button"}
 
       .row
         .twelve.columns.query
-          %label Filter
-          %input{"ng-model" => "query", :type => "text"}
+          %h1 Find anything
+          %input{"ng-model" => "query", type: "text"}
+
+      .row
+        .twelve.columns
+          %a.radius.button{href: "#"}
+            +
 
       .row
         .twelve.columns.links
@@ -36,6 +37,6 @@
                   {{ link.title }}
 
               .description
-                {{ link.description }}
+                \- {{ link.description }}
             .category
               {{ link.category }}

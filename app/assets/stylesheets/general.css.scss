@@ -7,6 +7,12 @@ html, body {
   background-color: $background-color;
 }
 
+h1 {
+  color: $base-color;
+  font-weight: bold;
+  font-size: 2em;
+}
+
 a {
   color: $base-color;
 
@@ -20,9 +26,12 @@ a {
     color: lighten($base-color, 10%);
   }
 }
-a.radius {
+a.radius, a:visited.radius, input.radius {
   color: #FFFFFF;
   background-color: $base-color;
+}
+a:hover.radius, input:hover.radius {
+  background-color: lighten($base-color, 10%);
 }
 
 header {
@@ -60,6 +69,8 @@ footer {
   }
 }
 .query {
+  margin-bottom: 1em;
+
   input {
     font-size: $size-normal;
     padding: 3px;

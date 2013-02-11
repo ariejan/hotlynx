@@ -2,7 +2,7 @@
 @import "_mixins.css.scss";
 
 .links {
-  margin-top: 3em;
+  margin-top: 2em;
 
   .link_line {
     float: left;
@@ -10,6 +10,7 @@
     width: 100%;
     margin-bottom: 0.8em;
     border: 1px solid #C5C3C3;
+    height: 3em;
     @include box-shadow;
 
     .vote {
@@ -21,7 +22,7 @@
       padding-bottom: 1.2em;
 
       .vote_count {
-        margin-top: 0.5em;
+        margin-top: 0.6em;
         text-align: center;
         font-size: 125%;
       }
@@ -32,7 +33,7 @@
     .link {
       float: left;
       width: 70%;
-      margin: 0.5em 1em;
+      margin: 0.8em 1em;
 
       .title {
         float: left;
@@ -43,10 +44,9 @@
       }
       .description {
         float: left;
-        clear: both;
-        width: 100%;
+        padding-left: 0.5em;
         font-size: 80%;
-        padding-top: 0.5em  ;
+        padding-top: 0.5em;
       }
     }
     .category {
