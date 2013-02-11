@@ -6,6 +6,6 @@ class ApplicationController < ActionController::Base
   private
 
   def intercept_html_requests
-    render('home/index') if request.format == Mime::HTML
+    render('layouts/application') if request.format == Mime::HTML
   end
 end

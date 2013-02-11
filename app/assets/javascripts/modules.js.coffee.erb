@@ -1,0 +1,13 @@
+app = angular.module("Hotlynx", ["ngResource"]).config ["$routeProvider", ($routeProvider) ->
+  $routeProvider.when("/links",
+    templateUrl: '<%= asset_path("links-index.html") %>'
+    controller: LinksIndexCtrl
+  ).when("/links/new",
+    templateUrl: '<%= asset_path("links-new.html") %>'
+    controller: LinksNewCtrl
+  ).otherwise redirectTo: "/links"
+]
+
+app.factory "Link", ["$resource", ($resource) ->
+  $resource("/links/:id", {id: "@id"}, {update: {method: "PUT"}})
+]

@@ -1,0 +1,17 @@
+<div ng-controller="LinksNewCtrl">
+  <div class="row">
+    <div class="twelve columns">
+      <form ng-submit="addLink()">
+        <label>Title</label>
+        <input ng-model="newLink.title" type="text" />
+        <label>Description</label>
+        <input ng-model="newLink.description" type="text" />
+        <label>URL</label>
+        <input ng-model="newLink.url" type="text" />
+        <label>Category</label>
+        <input ng-model="newLink.category" type="text" />
+        <input type="submit" value="Add" class="radius button" />
+      </form>
+    </div>
+  </div>
+</div>
