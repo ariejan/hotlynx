@@ -69,16 +69,20 @@
       }
     }
     .category {
-      float: right;
-      padding: 0.5em;
-      margin: 0.5em;
-      margin-right: 1em;
-      background-color: $base-color;
-      border: 1px solid darken($base-color, 10);;
-      color: #FFFFFF;
-      font-size: 90%;
-      font-weight: bold;
-      @include round-corners;
+      text-align: center;
+
+      .category_label {
+        display: inline-block;
+        margin: auto;
+        padding: 0.5em;
+        margin-top: 0.5em;
+        background-color: $base-color;
+        border: 1px solid darken($base-color, 10);;
+        color: #FFFFFF;
+        font-size: 90%;
+        font-weight: bold;
+        @include round-corners;
+      }
     }
   }
 }
