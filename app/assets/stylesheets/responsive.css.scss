@@ -1,39 +1,83 @@
 /* Smartphones (portrait and landscape) ----------- */
-@media only screen 
-and (min-device-width : 320px) 
+@media only screen
+and (min-device-width : 320px)
 and (max-device-width : 480px) {
   header {
-    margin: 0.5em 0 0.5em 1em;
-
-    a, a:visited, a:hover {
-      font-size: 1.5em; /* 24px/16px */
+    img {
+      visibility:hidden;
     }
+
+    .title {
+      font-size: 1.5em;
+    }
+  }
+  h1 {
+    font-size: 1em;
+  }
+  .links .link_line .link .title a {
+    font-size: 100%;
+  }
+  .links .link_line .link .description {
+    font-size: 80%;
+  }
+  .links .link_line .vote .vote_count {
+    font-size: 110%;
   }
 }
 
 /* Smartphones (portrait) ----------- */
-@media only screen 
-and (max-width : 320px) {
-  header {
-    margin: 0.5em 0 0.5em 1em;
+@media
+only screen and (max-width : 320px) {
+  .header_container {
+    height: 5em;
 
-    a, a:visited, a:hover {
-      font-size: 1.5em; /* 24px/16px */
+    img {
+      visibility:hidden;
+    }
+
+    .title {
+      font-size: 1.5em;
     }
   }
-
+  h1 {
+    font-size: 1em;
+  }
+  .links .link_line .link .title a {
+    font-size: 100%;
+  }
+  .links .link_line .link .description {
+    font-size: 80%;
+  }
+  .links .link_line .vote .vote_count {
+    font-size: 110%;
+  }
 }
 
 /* iPhone 4 ----------- */
 @media
 only screen and (-webkit-min-device-pixel-ratio : 1.5),
 only screen and (min-device-pixel-ratio : 1.5) {
-  header {
-    margin: 0.5em 0 0.5em 1em;
+  .header_container {
+    height: 5em;
 
-    a, a:visited, a:hover {
-      font-size: 1.5em; /* 24px/16px */
+    img {
+      visibility:hidden;
+    }
+
+    .title {
+      font-size: 1.5em;
     }
   }
-
+  h1 {
+    font-size: 1em;
+  }
+  .links .link_line .link .title a {
+    font-size: 100%;
+  }
+  .links .link_line .link .description {
+    font-size: 80%;
+  }
+  .links .link_line .vote .vote_count {
+    font-size: 110%;
+  }
 }

@@ -17,7 +17,11 @@
     <div class="twelve columns links">
       <div class="link_line" ng-repeat="link in links | filter:query">
         <div class="vote">
-          <div class="vote_count">23</div>
+          <div class="vote_count">{{ link.votes }}</div>
+          <div class="vote_images">
+            <img class="up" src="images/up.png" ng-click="upVote(link)" />
+            <img class= "down" src="images/down.png" ng-click="downVote(link)" />
+          </div>
         </div>
         <div class="link">
           <div class="title">

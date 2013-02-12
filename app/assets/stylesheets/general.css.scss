@@ -12,7 +12,12 @@ h1 {
   font-weight: bold;
   font-size: 2em;
 }
-
+img {
+  max-width: 100%;
+}
+.clear {
+  clear:both;
+}
 a {
   color: $base-color;
 
@@ -33,8 +38,8 @@ a.radius, a:visited.radius, input.radius {
 a:hover.radius, input:hover.radius {
   background-color: lighten($base-color, 10%);
 }
-
-header {
+.header_container {
+  float: left;
   margin-bottom: 1em;
   padding: 0.5em;
   width: 100%;
@@ -47,7 +52,7 @@ header {
     font-weight: bold;
     font-family: $default-font;
     color: $header-title-color;
-    padding: 0.9em 1em 1em 0.5em;
+    padding: 0.9em 1em 1em 0em;
   }
   .logo {
     float: left;
@@ -74,6 +79,7 @@ footer {
   input {
     font-size: $size-normal;
     padding: 3px;
+    margin-top: 1em;
   }
 }
 

@@ -26,8 +26,14 @@
         text-align: center;
         font-size: 125%;
       }
-      .upvote, .downvote > a {
-        font-size: 75%;
+      .vote_images {
+        .up {
+        float: left;
+        }
+        .down {
+          clear: both;
+          float: left;
+        }
       }
     }
     .link {
