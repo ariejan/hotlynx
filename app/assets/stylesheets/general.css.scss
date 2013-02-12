@@ -34,6 +34,7 @@ a {
 a.radius, a:visited.radius, input.radius {
   color: #FFFFFF;
   background-color: $base-color;
+  font-weight: bold;
 }
 a:hover.radius, input:hover.radius {
   background-color: lighten($base-color, 10%);

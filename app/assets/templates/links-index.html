@@ -2,7 +2,7 @@
 
   <div class="row">
     <div class="two columns offset-by-ten">
-      <a class="radius button add" href="#" ng-click="addLink()">+</a>
+      <a class="radius button add" href="#/links/new">+</a>
     </div>
   </div>
 
@@ -24,14 +24,15 @@
           </div>
         </div>
         <div class="link">
-          <div class="title">
-            <a href="{{link.url}}" target="_blank">{{link.title}}</a>
-          </div>
+          <div class="title"><a href="{{link.url}}" target="_blank">{{link.title}}</a></div>
           <div class="description">- {{ link.description }}</div>
+          <div class="maintenance">
+            <a class="edit" href="#/links/edit/{{link.id}}">edit</a> |
+            <a class="delete" ng-click="deleteLink(link)">delete</a>
+          </div>
         </div>
         <div class="category">{{ link.category }}</div>
       </div>
     </div>
   </div>
-
 </div>

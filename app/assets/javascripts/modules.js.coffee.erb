@@ -5,6 +5,9 @@ app = angular.module("Hotlynx", ["ngResource"]).config ["$routeProvider", ($rout
   ).when("/links/new",
     templateUrl: '<%= asset_path("links-new.html") %>'
     controller: LinksNewCtrl
+  ).when("/links/edit/:id",
+    templateUrl: '<%= asset_path("links-edit.html") %>'
+    controller: LinksEditCtrl
   ).otherwise redirectTo: "/links"
 ]
 

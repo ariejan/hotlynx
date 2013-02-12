@@ -22,13 +22,17 @@
       padding-bottom: 1.2em;
 
       .vote_count {
-        margin-top: 0.6em;
+        float: left;
+        margin: 0.5em 0em 0.5em 1.5em;
         text-align: center;
-        font-size: 125%;
+        font-size: 150%;
       }
       .vote_images {
-        .up {
         float: left;
+        margin: 0.5em 0.5em 0.5em 1em;
+
+        .up {
+          float: left;
         }
         .down {
           clear: both;
@@ -52,7 +56,16 @@
         float: left;
         padding-left: 0.5em;
         font-size: 80%;
-        padding-top: 0.5em;
+        padding-top: 0.4em;
+      }
+      .maintenance {
+        float: right;
+        font-size: 80%;
+        padding-top: 0.4em;
+
+        a, a:hover, a:visited {
+          font-size: 100%;
+        }
       }
     }
     .category {
