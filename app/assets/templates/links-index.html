@@ -2,7 +2,7 @@
 
   <div class="row">
     <div class="two columns offset-by-ten">
-      <a class="radius button add" href="#/links/new">+</a>
+      <a class="radius button add" ng-click="addLink()">+</a>
     </div>
   </div>
 
@@ -15,7 +15,7 @@
 
   <div class="row">
     <div class="twelve columns links">
-      <div class="link_line" ng-repeat="link in links | filter:query">
+      <div class="link_line" ng-repeat="link in links | filter:query | filter:filters">
         <div class="vote">
           <div class="vote_count">{{ link.votes }}</div>
           <div class="vote_images">
@@ -32,9 +32,16 @@
           </div>
         </div>
         <div class="category">
-          <div class="category_label">{{ link.category }}</div>
+          <div class="category_label" ng-click="filters.category = link.category">{{ link.category }}</div>
         </div>
       </div>
     </div>
   </div>
+
+  <div class="row">
+    <div class="twelve columns clear_filter">
+      <a class="radius button" ng-click="filters.category = ''">Clear category filter</a>
+    </div>
+  </div>
+
 </div>
