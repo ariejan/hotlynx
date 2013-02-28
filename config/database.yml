@@ -1,16 +1,26 @@
 development:
-  adapter: postgresql
+  adapter:  postgresql
   encoding: utf8
   database: hotlynx_development
   pool: 5
   username: johnvanarkelen
   password:
-  host: localhost
+  host:     localhost
 
 test:
-  adapter: postgresql
+  adapter:  postgresql
   encoding: utf8
   database: hotlynx_test
   pool: 5
   username: johnvanarkelen
   password:
+
+production:
+  adapter:  mysql2
+  hostname: 198.211.124.185
+  database: hotlynx
+  username: root
+  password:
+  socket: /tmp/mysql.sock
+  pool: 5
+  timeout: 5000

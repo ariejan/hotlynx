@@ -8,7 +8,6 @@ gem 'activerecord-postgresql-adapter'
 gem 'i18n'
 gem 'haml'
 gem 'bcrypt-ruby', '3.0.1'
-gem 'newrelic_rpm'
 
 group :assets do
   gem 'sass-rails'
@@ -29,4 +28,8 @@ group :development, :test do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'konacha'
+end
+
+group :production do
+  gem 'mysql2', '0.3.11'
 end
