@@ -8,7 +8,7 @@ require 'bundler/capistrano'
 
 # main details
 set :application, "hotlynx"
-set :user, "jarkelen"
+set :user, "passenger"
 set :use_sudo, false
 role :web, "198.211.124.185"
 role :app, "198.211.124.185"
