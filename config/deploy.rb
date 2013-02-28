@@ -10,6 +10,7 @@ require 'bundler/capistrano'
 set :application, "hotlynx"
 set :user, "passenger"
 set :use_sudo, false
+set :normalize_asset_timestamps, false
 role :web, "198.211.124.185"
 role :app, "198.211.124.185"
 role :db,  "198.211.124.185", :primary => true
